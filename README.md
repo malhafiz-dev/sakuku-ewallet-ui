@@ -100,6 +100,6 @@ Compiles and minifies the final CSS bundle to `dist/assets/css/main.css`.
 
 ---
 
-## 📄 License
+## 🎯 Purpose & Acknowledgments
 
-Distributed under the MIT License.
+This repository was created as a **hands-on learning project** to practice and showcase proficiency in **Tailwind CSS v4**, modern CSS layout techniques, and responsive web design. Built as part of a Web Development Course completion portfolio.

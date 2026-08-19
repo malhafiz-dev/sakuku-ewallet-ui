@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../assets/css/main.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Red+Rose:wght@300..700&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="../assets/images/wallet-white.png" type="image/x-icon" />
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <div class="container mx-auto max-w-3xl">
+    <div class="flex min-h-dvh flex-col gap-4 bg-blue-50 p-4 pb-20">
+      <div class="flex w-full flex-col">
+        <!-- Avatar + Name -->
+        <div class="mb-4 flex">
+          <a href="#"
+            class="flex items-center gap-2 hover:opacity-70 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+            <img src="../assets/images/avatar-placeholder.jpg" alt="avatar" class="size-8" />
+            <span class="text-lg font-semibold text-gray-900">John Doe</span>
+          </a>
+        </div>
+        <!-- ./ Avatar + Name -->
+
+        <!-- Card Balance + Action -->
+        <div class="mb-8 flex flex-col">
+          <!-- Card Balance -->
+          <div
+            class="from-brands-light-blue flex h-41.25 flex-col justify-between rounded-2xl bg-linear-to-b to-blue-400 p-5 text-white">
+            <h1 class="font-brand text-2xl font-bold uppercase">sakuku</h1>
+            <h2 class="flex items-center gap-2 text-2xl font-medium">
+              <span data-balance-value="Rp. 52.000.000,00" data-show-balance="true" id="balance">Rp.
+                52.000.000,00</span>
+              <button id="visibilityButton" type="button"
+                class="icon-[material-symbols--visibility] text-icon-lg cursor-pointer"
+                aria-label="Tampilkan saldo"></button>
+            </h2>
+          </div>
+          <!-- ./ Card Balance -->
+
+          <!-- Card Action -->
+          <div class="mt-2 flex gap-3">
+            <button type="button"
+              class="open hover:bg-brands-light-blue text-brands-light-blue border-brands-light-blue inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 bg-transparent p-2 text-xs uppercase hover:text-white focus:ring-2 focus:ring-blue-400 focus:outline-none disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-transparent disabled:text-gray-400"
+              data-modal-target="modal-topup">
+              <span class="icon-[material-symbols--download-rounded] text-icon-sm"></span>
+              <span>Top Up</span>
+            </button>
+
+            <button type="button"
+              class="open bg-brands-light-blue hover:bg-brands-dark-blue inline-flex w-full items-center justify-center gap-2 rounded-xl p-2 text-xs text-white uppercase focus:ring-2 focus:ring-blue-400 focus:outline-none disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400"
+              data-modal-target="modal-transfer">
+              <span class="icon-[material-symbols--upload-rounded] text-icon-sm"></span>
+              <span>Transfer</span>
+            </button>
+          </div>
+          <!-- ./ Card Action -->
+        </div>
+        <!-- Card Balance + Action -->
+
+        <!-- Transaction History -->
+        <div class="rounded-[20px] bg-white p-2.5 shadow-md">
+          <!-- Card Header -->
+          <div class="mb-2 flex justify-between p-2.5">
+            <p class="font-semibold text-gray-900">Riwayat Transaksi</p>
+            <a href="#"
+              class="text-brands-light-blue hover:text-brands-light-blue/70 text-xs font-semibold focus:ring-2 focus:ring-blue-400 focus:outline-none">Lihat
+              lainnya</a>
+          </div>
+          <!-- ./ Card Header -->
+
+          <!-- Items -->
+          <a href=""
+            class="flex justify-between rounded-2xl p-3 hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+            <!-- Left -->
+            <span class="flex items-center gap-5">
+              <span
+                class="icon-[material-symbols--download-rounded] text-icon-lg text-brands-light-blue shrink-0"></span>
+              <span class="flex flex-col">
+                <span class="line-clamp-2 text-sm font-semibold text-gray-900">Peter Hyatt</span>
+                <span class="line-clamp-1 text-xs text-gray-500">02 August 2026</span>
+              </span>
+            </span>
+            <!-- ./ Left -->
+
+            <!-- Right -->
+            <span class="flex shrink-0 items-center gap-2">
+              <span class="text-xs font-medium text-red-500">RP. 50.000,00</span>
+              <span class="icon-[material-symbols--chevron-right-rounded] text-icon-md text-gray-900"></span>
+            </span>
+            <!-- ./ Right -->
+          </a>
+
+          <div class="my-2.5 flex gap-4 px-5 whitespace-nowrap last:hidden">
+            <div class="h-px w-full grow bg-gray-300"></div>
+          </div>
+          <!-- ./ Items -->
+
+          <!-- Items -->
+          <a href=""
+            class="flex justify-between rounded-2xl p-3 hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+            <!-- Left -->
+            <span class="flex items-center gap-5">
+              <span
+                class="icon-[material-symbols--download-rounded] text-icon-lg text-brands-light-blue shrink-0"></span>
+              <span class="flex flex-col">
+                <span class="line-clamp-2 text-sm font-semibold text-gray-900">Title</span>
+                <span class="line-clamp-1 text-xs text-gray-500">Description</span>
+              </span>
+            </span>
+            <!-- ./ Left -->
+
+            <!-- Right -->
+            <span class="flex shrink-0 items-center gap-2">
+              <span class="text-xs font-medium text-red-500">Right Text</span>
+              <span class="icon-[material-symbols--chevron-right-rounded] text-icon-md text-gray-900"></span>
+            </span>
+            <!-- ./ Right -->
+          </a>
+
+          <div class="my-2.5 flex gap-4 px-5 whitespace-nowrap last:hidden">
+            <div class="h-px w-full grow bg-gray-300"></div>
+          </div>
+          <!-- ./ Items -->
+
+          <!-- Items -->
+          <a href=""
+            class="flex justify-between rounded-2xl p-3 hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+            <!-- Left -->
+            <span class="flex items-center gap-5">
+              <span
+                class="icon-[material-symbols--download-rounded] text-icon-lg text-brands-light-blue shrink-0"></span>
+              <span class="flex flex-col">
+                <span class="line-clamp-2 text-sm font-semibold text-gray-900">Title</span>
+                <span class="line-clamp-1 text-xs text-gray-500">Description</span>
+              </span>
+            </span>
+            <!-- ./ Left -->
+
+            <!-- Right -->
+            <span class="flex shrink-0 items-center gap-2">
+              <span class="text-xs font-medium text-red-500">Right Text</span>
+              <span class="icon-[material-symbols--chevron-right-rounded] text-icon-md text-gray-900"></span>
+            </span>
+            <!-- ./ Right -->
+          </a>
+
+          <div class="my-2.5 flex gap-4 px-5 whitespace-nowrap last:hidden">
+            <div class="h-px w-full grow bg-gray-300"></div>
+          </div>
+          <!-- ./ Items -->
+
+          <!-- Items -->
+          <a href=""
+            class="flex justify-between rounded-2xl p-3 hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+            <!-- Left -->
+            <span class="flex items-center gap-5">
+              <span
+                class="icon-[material-symbols--download-rounded] text-icon-lg text-brands-light-blue shrink-0"></span>
+              <span class="flex flex-col">
+                <span class="line-clamp-2 text-sm font-semibold text-gray-900">Title</span>
+                <span class="line-clamp-1 text-xs text-gray-500">Description</span>
+              </span>
+            </span>
+            <!-- ./ Left -->
+
+            <!-- Right -->
+            <span class="flex shrink-0 items-center gap-2">
+              <span class="text-xs font-medium text-red-500">Right Text</span>
+              <span class="icon-[material-symbols--chevron-right-rounded] text-icon-md text-gray-900"></span>
+            </span>
+            <!-- ./ Right -->
+          </a>
+
+          <div class="my-2.5 flex gap-4 px-5 whitespace-nowrap last:hidden">
+            <div class="h-px w-full grow bg-gray-300"></div>
+          </div>
+          <!-- ./ Items -->
+
+          <!-- Items -->
+          <a href=""
+            class="flex justify-between rounded-2xl p-3 hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+            <!-- Left -->
+            <span class="flex items-center gap-5">
+              <span
+                class="icon-[material-symbols--download-rounded] text-icon-lg text-brands-light-blue shrink-0"></span>
+              <span class="flex flex-col">
+                <span class="line-clamp-2 text-sm font-semibold text-gray-900">Title</span>
+                <span class="line-clamp-1 text-xs text-gray-500">Description</span>
+              </span>
+            </span>
+            <!-- ./ Left -->
+
+            <!-- Right -->
+            <span class="flex shrink-0 items-center gap-2">
+              <span class="text-xs font-medium text-red-500">Right Text</span>
+              <span class="icon-[material-symbols--chevron-right-rounded] text-icon-md text-gray-900"></span>
+            </span>
+            <!-- ./ Right -->
+          </a>
+
+          <div class="my-2.5 flex gap-4 px-5 whitespace-nowrap last:hidden">
+            <div class="h-px w-full grow bg-gray-300"></div>
+          </div>
+          <!-- ./ Items -->
+
+          <!-- Items -->
+          <a href=""
+            class="flex justify-between rounded-2xl p-3 hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+            <!-- Left -->
+            <span class="flex items-center gap-5">
+              <span
+                class="icon-[material-symbols--download-rounded] text-icon-lg text-brands-light-blue shrink-0"></span>
+              <span class="flex flex-col">
+                <span class="line-clamp-2 text-sm font-semibold text-gray-900">Title</span>
+                <span class="line-clamp-1 text-xs text-gray-500">Description</span>
+              </span>
+            </span>
+            <!-- ./ Left -->
+
+            <!-- Right -->
+            <span class="flex shrink-0 items-center gap-2">
+              <span class="text-xs font-medium text-red-500">Right Text</span>
+              <span class="icon-[material-symbols--chevron-right-rounded] text-icon-md text-gray-900"></span>
+            </span>
+            <!-- ./ Right -->
+          </a>
+
+          <div class="my-2.5 flex gap-4 px-5 whitespace-nowrap last:hidden">
+            <div class="h-px w-full grow bg-gray-300"></div>
+          </div>
+          <!-- ./ Items -->
+
+          <!-- Items -->
+          <a href=""
+            class="flex justify-between rounded-2xl p-3 hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+            <!-- Left -->
+            <span class="flex items-center gap-5">
+              <span
+                class="icon-[material-symbols--download-rounded] text-icon-lg text-brands-light-blue shrink-0"></span>
+              <span class="flex flex-col">
+                <span class="line-clamp-2 text-sm font-semibold text-gray-900">Title</span>
+                <span class="line-clamp-1 text-xs text-gray-500">Description</span>
+              </span>
+            </span>
+            <!-- ./ Left -->
+
+            <!-- Right -->
+            <span class="flex shrink-0 items-center gap-2">
+              <span class="text-xs font-medium text-red-500">Right Text</span>
+              <span class="icon-[material-symbols--chevron-right-rounded] text-icon-md text-gray-900"></span>
+            </span>
+            <!-- ./ Right -->
+          </a>
+
+          <div class="my-2.5 flex gap-4 px-5 whitespace-nowrap last:hidden">
+            <div class="h-px w-full grow bg-gray-300"></div>
+          </div>
+          <!-- ./ Items -->
+        </div>
+        <!-- ./ Transaction History -->
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="fixed bottom-0 left-0 z-10 flex w-full justify-evenly bg-white">
+      <a href="#" class="group flex w-full flex-col items-center p-3 text-gray-900 hover:bg-gray-50">
+        <span class="icon-[material-symbols--home-outline] text-icon-md inline group-hover:hidden"></span>
+        <span class="icon-[material-symbols--home] text-icon-md hidden group-hover:inline"></span>
+        <span class="text-xs font-semibold">Beranda</span>
+      </a>
+      <a href="#" class="group flex w-full flex-col items-center p-3 text-gray-900 hover:bg-gray-50">
+        <span class="icon-[material-symbols--receipt-outline-rounded] text-icon-md inline group-hover:hidden"></span>
+        <span class="icon-[material-symbols--receipt-rounded] text-icon-md hidden group-hover:inline"></span>
+        <span class="text-xs font-semibold">Riwayat</span>
+      </a>
+      <a href="#" class="group flex w-full flex-col items-center p-3 text-gray-900 hover:bg-gray-50">
+        <span class="icon-[material-symbols--person-outline] text-icon-md inline group-hover:hidden"></span>
+        <span class="icon-[material-symbols--person] text-icon-md hidden group-hover:inline"></span>
+        <span class="text-xs font-semibold">Akun</span>
+      </a>
+    </div>
+    <!-- ./ Navbar -->
+
+    <!-- Modal Topup -->
+    <dialog id="modal-topup"
+      class="m-0 size-full bg-transparent backdrop:bg-black/50 backdrop:backdrop-blur-lg open:flex open:max-h-none open:max-w-none open:flex-col open:justify-end">
+      <div class="flex flex-col">
+        <div class="flex justify-between px-6 pb-8">
+          <button type="button"
+            class="text-brands-light-blue invisible inline-flex items-center justify-center gap-2 rounded-xl bg-white p-2 text-xs uppercase hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-gray-200 disabled:text-gray-400">
+            <span class="icon-[material-symbols--chevron-left-rounded] text-icon-sm"></span>
+            <span>Back</span>
+          </button>
+          <button type="button"
+            class="close text-brands-light-blue inline-flex items-center justify-center gap-2 rounded-xl bg-white p-2 text-xs uppercase hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-gray-200 disabled:text-gray-400"
+            data-modal-target="modal-topup">
+            <span class="icon-[material-symbols--close-rounded] text-icon-sm"></span>
+            <span>Close</span>
+          </button>
+        </div>
+        <div class="flex flex-col gap-8 rounded-t-[36px] bg-white p-6">
+          <!-- Form Top up -->
+          <form action="#" method="post" class="flex flex-col gap-4">
+            <!-- Input Nominal-->
+            <div class="flex flex-col gap-y-1.5">
+              <div class="relative">
+                <input type="number" inputmode="numeric"
+                  class="peer w-full rounded-2xl border border-gray-400 bg-white p-3 ps-12 text-sm text-gray-900 placeholder:text-gray-400 invalid:bg-red-200 invalid:text-red-900 invalid:caret-red-900 focus:ring-2 focus:ring-blue-400 focus:outline-none focus:invalid:ring-red-900 disabled:border-gray-300 disabled:bg-gray-100"
+                  placeholder="Nominal rupiah" />
+                <div
+                  class="text-icon-md absolute inset-y-0 flex items-center ps-4 text-gray-400 peer-invalid:text-red-400 peer-invalid:peer-focus:text-red-900">
+                  <span class="icon-[material-symbols--account-balance-wallet]"></span>
+                </div>
+              </div>
+            </div>
+            <!-- ./ Input Nominal-->
+
+            <!-- Button -->
+            <button type="button"
+              class="bg-brands-light-blue hover:bg-brands-dark-blue inline-flex items-center justify-center gap-2 rounded-xl p-2 text-xs text-white uppercase focus:ring-2 focus:ring-blue-400 focus:outline-none disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400">
+              <span class="icon-[material-symbols--send-rounded] text-icon-sm"></span>
+              <span>Top Up</span>
+            </button>
+            <!-- ./ Button -->
+          </form>
+          <!-- ./ Form Top up -->
+        </div>
+      </div>
+    </dialog>
+    <!-- ./ Modal Topup -->
+
+    <!-- Modal Transfer -->
+    <dialog id="modal-transfer"
+      class="m-0 size-full bg-transparent backdrop:bg-black/50 backdrop:backdrop-blur-lg open:flex open:max-h-none open:max-w-none open:flex-col open:justify-end">
+      <div class="flex flex-col">
+        <div class="flex justify-between px-6 pb-8">
+          <button type="button" id="button-back-modal-content"
+            class="invisible text-brands-light-blue inline-flex items-center justify-center gap-2 rounded-xl bg-white p-2 text-xs uppercase hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-gray-200 disabled:text-gray-400"
+            data-history-back="[]">
+            <span class="icon-[material-symbols--chevron-left-rounded] text-icon-sm"></span>
+            <span>Back</span>
+          </button>
+          <button type="button"
+            class="close text-brands-light-blue inline-flex items-center justify-center gap-2 rounded-xl bg-white p-2 text-xs uppercase hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-gray-200 disabled:text-gray-400"
+            data-modal-target="modal-transfer">
+            <span class="icon-[material-symbols--close-rounded] text-icon-sm"></span>
+            <span>Close</span>
+          </button>
+        </div>
+        <div class="flex flex-col gap-8 rounded-t-[36px] bg-white p-6">
+          <!-- Section: Account Check -->
+          <div id="modal-content--account-check">
+            <form action="#" method="post" class="flex w-full flex-col gap-4">
+              <!-- logo + search contact button -->
+              <div class="flex justify-between">
+                <div class="flex items-center gap-4">
+                  <img src="../assets/images/wallet.png" alt="logo" class="h-5" />
+                </div>
+                <a href="#"
+                  class="text-brands-light-blue hover:text-brands-light-blue/70 text-xs font-semibold focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  onclick="showSearchContact()">Cari Kontak</a>
+              </div>
+              <!-- ./ logo + search contact button -->
+
+              <!-- Input + Button -->
+              <div class="flex flex-col gap-y-1.5">
+                <div class="relative">
+                  <input type="text"
+                    class="peer w-full rounded-2xl border border-gray-400 bg-white p-3 pe-12 text-sm text-gray-900 placeholder:text-gray-400 invalid:bg-red-200 invalid:text-red-900 invalid:caret-red-900 focus:ring-2 focus:ring-blue-400 focus:outline-none focus:invalid:ring-red-900 disabled:border-gray-300 disabled:bg-gray-100"
+                    placeholder="Masukkan SAKUKU ID" />
+                  <div
+                    class="text-icon-md absolute inset-y-0 inset-e-0 flex items-center pe-4 text-gray-400 peer-invalid:text-red-400 peer-invalid:peer-focus:text-red-900">
+                    <span class="icon-[material-symbols--search-rounded]"></span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button"
+                class="bg-brands-light-blue hover:bg-brands-dark-blue inline-flex items-center justify-center gap-2 rounded-xl p-2 text-xs text-white uppercase focus:ring-2 focus:ring-blue-400 focus:outline-none disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400">
+                <span class="icon-[material-symbols--search-rounded] text-icon-sm"></span>
+                <span>Cek Rekening</span>
+              </button>
+              <!-- ./ Input + Button -->
+            </form>
+          </div>
+          <!-- ./ Section: Account Check -->
+
+          <!-- Section: Search Contact -->
+          <div id="modal-content--search-contact" class="hidden">
+            <div class="flex w-full flex-col">
+              <div class="mb-2 flex flex-col gap-y-1.5">
+                <div class="relative">
+                  <input id="my-input-text" type="text"
+                    class="peer w-full rounded-2xl border border-gray-400 bg-white p-3 pe-12 text-sm text-gray-900 placeholder:text-gray-400 invalid:bg-red-200 invalid:text-red-900 invalid:caret-red-900 focus:ring-2 focus:ring-blue-400 focus:outline-none focus:invalid:ring-red-900 disabled:border-gray-300 disabled:bg-gray-100"
+                    placeholder="Cari nama orang / no. rekening" />
+
+                  <div
+                    class="text-icon-md absolute inset-y-0 inset-e-0 flex items-center pe-4 text-gray-400 peer-invalid:text-red-400 peer-invalid:peer-focus:text-red-900">
+                    <span class="icon-[material-symbols--search]"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Items -->
+              <a href="#"
+                class="flex justify-between rounded-2xl p-3 hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                onclick="showInputNominal()">
+                <!-- Left -->
+                <span class="flex items-center gap-5">
+                  <span
+                    class="icon-[material-symbols--person-outline-rounded] text-icon-lg text-brands-light-blue shrink-0"></span>
+                  <span class="flex flex-col">
+                    <span class="line-clamp-2 text-sm font-semibold text-gray-900">Rodolfo Hessel</span>
+                    <span class="line-clamp-1 text-xs text-gray-500">234567</span>
+                  </span>
+                </span>
+                <!-- ./ Left -->
+
+                <!-- Right -->
+                <span class="flex shrink-0 items-center gap-2">
+                  <span class="icon-[material-symbols--chevron-right-rounded] text-icon-md text-gray-900"></span>
+                </span>
+                <!-- ./ Right -->
+              </a>
+
+              <div class="my-2.5 flex gap-4 px-5 whitespace-nowrap last:hidden">
+                <div class="h-px w-full grow bg-gray-300"></div>
+              </div>
+              <!-- ./ Items -->
+
+              <!-- Items -->
+              <a href="#"
+                class="flex justify-between rounded-2xl p-3 hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                onclick="showInputNominal()">
+                <!-- Left -->
+                <span class="flex items-center gap-5">
+                  <span
+                    class="icon-[material-symbols--person-outline-rounded] text-icon-lg text-brands-light-blue shrink-0"></span>
+                  <span class="flex flex-col">
+                    <span class="line-clamp-2 text-sm font-semibold text-gray-900">Beulah Steuber Sr.</span>
+                    <span class="line-clamp-1 text-xs text-gray-500">
+                      234567
+                    </span>
+                  </span>
+                </span>
+                <!-- ./ Left -->
+
+                <!-- Right -->
+                <span class="flex shrink-0 items-center gap-2">
+                  <span class="icon-[material-symbols--chevron-right-rounded] text-icon-md text-gray-900"></span>
+                </span>
+                <!-- ./ Right -->
+              </a>
+
+              <div class="my-2.5 flex gap-4 px-5 whitespace-nowrap last:hidden">
+                <div class="h-px w-full grow bg-gray-300"></div>
+              </div>
+              <!-- ./ Items -->
+
+              <!-- Items -->
+              <a href="#"
+                class="flex justify-between rounded-2xl p-3 hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                onclick="showInputNominal()">
+                <!-- Left -->
+                <span class="flex items-center gap-5">
+                  <span
+                    class="icon-[material-symbols--person-outline-rounded] text-icon-lg text-brands-light-blue shrink-0"></span>
+                  <span class="flex flex-col">
+                    <span class="line-clamp-2 text-sm font-semibold text-gray-900">Denise Schuster III</span>
+                    <span class="line-clamp-1 text-xs text-gray-500">234567</span>
+                  </span>
+                </span>
+                <!-- ./ Left -->
+
+                <!-- Right -->
+                <span class="flex shrink-0 items-center gap-2">
+                  <span class="icon-[material-symbols--chevron-right-rounded] text-icon-md text-gray-900"></span>
+                </span>
+                <!-- ./ Right -->
+              </a>
+
+              <div class="my-2.5 flex gap-4 px-5 whitespace-nowrap last:hidden">
+                <div class="h-px w-full grow bg-gray-300"></div>
+              </div>
+              <!-- ./ Items -->
+
+              <!-- Items -->
+              <a href="#"
+                class="flex justify-between rounded-2xl p-3 hover:bg-blue-50 focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                onclick="showInputNominal()">
+                <!-- Left -->
+                <span class="flex items-center gap-5">
+                  <span
+                    class="icon-[material-symbols--person-outline-rounded] text-icon-lg text-brands-light-blue shrink-0"></span>
+                  <span class="flex flex-col">
+                    <span class="line-clamp-2 text-sm font-semibold text-gray-900">Amos Rodriguez</span>
+                    <span class="line-clamp-1 text-xs text-gray-500">234567</span>
+                  </span>
+                </span>
+                <!-- ./ Left -->
+
+                <!-- Right -->
+                <span class="flex shrink-0 items-center gap-2">
+                  <span class="icon-[material-symbols--chevron-right-rounded] text-icon-md text-gray-900"></span>
+                </span>
+                <!-- ./ Right -->
+              </a>
+
+              <div class="my-2.5 flex gap-4 px-5 whitespace-nowrap last:hidden">
+                <div class="h-px w-full grow bg-gray-300"></div>
+              </div>
+              <!-- ./ Items -->
+            </div>
+          </div>
+          <!-- ./Section: Search Contact -->
+
+          <!-- Section: Input Nominal -->
+          <div id="modal-content--input-nominal" class="hidden">
+            <form action="#" method="post" class="flex w-full flex-col gap-4">
+              <!-- logo + search contact button -->
+              <div class="flex justify-between">
+                <div class="flex items-center gap-4">
+                  <img src="../assets/images/wallet.png" alt="logo" class="h-5" />
+                  <div class="flex items-center gap-2 text-xs font-medium">
+                    <span>John Doe</span>
+                    <span class="icon-[material-symbols--circle] text-[4px] text-gray-500"></span>
+                    <span>234567</span>
+                  </div>
+                </div>
+                <a href="#"
+                  class="text-brands-light-blue hover:text-brands-light-blue/70 text-xs font-semibold focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                  onclick="showSearchContact()">Cari Kontak</a>
+              </div>
+              <!-- logo + search contact button -->
+
+              <!-- Input + Button -->
+              <div class="flex flex-col gap-y-1.5">
+                <div class="relative">
+                  <input type="number" inputmode="numeric"
+                    class="peer w-full rounded-2xl border border-gray-400 bg-white p-3 pe-12 text-sm text-gray-900 placeholder:text-gray-400 invalid:bg-red-200 invalid:text-red-900 invalid:caret-red-900 focus:ring-2 focus:ring-blue-400 focus:outline-none focus:invalid:ring-red-900 disabled:border-gray-300 disabled:bg-gray-100"
+                    placeholder="Nominal rupiah" />
+                  <div
+                    class="text-icon-md absolute inset-y-0 inset-e-0 flex items-center pe-4 text-gray-400 peer-invalid:text-red-400 peer-invalid:peer-focus:text-red-900">
+                    <span class="icon-[material-symbols--search-rounded]"></span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button"
+                class="bg-brands-light-blue hover:bg-brands-dark-blue inline-flex items-center justify-center gap-2 rounded-xl p-2 text-xs text-white uppercase focus:ring-2 focus:ring-blue-400 focus:outline-none disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400">
+                <span class="icon-[material-symbols--send-rounded] text-icon-sm"></span>
+                <span>Lanjut Kirim</span>
+              </button>
+              <!-- ./ Input + Button -->
+            </form>
+          </div>
+          <!-- ./ Section: Input Nominal -->
+        </div>
+      </div>
+    </dialog>
+    <!-- ./ Modal Transfer -->
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

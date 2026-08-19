@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@plugin "@iconify/tailwind4";
+
+@theme {
+    /* Animation */
+    --animate-slide-top: slide-top .5s cubic-bezier(.57, .14, 0, 1.07) both;
+    --animate-slide-bottom: slide-bottom 1s cubic-bezier(.57, .14, 0, 1.07) both;
+
+    /* Font Size */
+    --text-icon-sm: 20px;
+    --text-icon-md: 24px;
+    --text-icon-lg: 28px;
+    --text-icon-xl: 32px;
+
+    /* Colors */
+    --color-brands-dark-blue: #0D47A1;
+    --color-brands-light-blue: #1565C0;
+
+    /* Font Family */
+    --font-sans: "Inter", sans-serif;
+    --font-brand: "Red Rose", serif;
+}
+
+@keyframes slide-top {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-bottom {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100%);
+    }
+}
